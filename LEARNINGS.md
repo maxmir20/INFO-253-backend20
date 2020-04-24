@@ -1,5 +1,4 @@
 <h3>Project title</h3>
-
 Meal Order Delivery App
 <br>
 <h3>Project Team</h3>
@@ -27,7 +26,7 @@ In terms of design, both Google Forms and Google Sheets are strong templates for
 <li>Project API</li>
 </ul>
 
-<h3>Project Process</h3>
+<h3>Function It Provides</h3>
 <ul>
 <li>Dining Hall Workers make a Google Form based on the day’s menu</li>
 <li>Form is linked to master Google Sheet</li>
@@ -37,3 +36,4 @@ In terms of design, both Google Forms and Google Sheets are strong templates for
 <li>Using Project API, retrieve MongoDB table of orders</li> 
 <li>Runners select orders to deliver and mark completed orders</li> 
 </ul>
+
