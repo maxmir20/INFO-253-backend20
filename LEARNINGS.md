@@ -1,4 +1,4 @@
-<h2>Project title</h2>
+<h3>Project title</h3>
 <br>
 Meal Order Delivery App
 
@@ -27,7 +27,7 @@ Meal Order Delivery App
 <li>Project API</li>
 </ul>
 
-<h3>TProcess</h3>
+<h3>Project Process</h3>
 <ul>
 <li>Dining Hall Workers make a Google Form based on the day’s menu</li>
 <li>Form is linked to master Google Sheet</li>
