@@ -6,7 +6,7 @@ Meal Order Delivery App
 Victor Hsin, Allison Kuo, Brinda Gurusamy, and Max Ingraham-Rakatansky
 <br>
 <h3>Background</h3>
-Given the recent news regarding Coronavirus, International House (I-House), a Berkeley residential housing community, has imposed strict rules limiting social gatherings to avoid potential spreading of the disease. To avoid contact, the dining hall and other public spaces have closed and instead students are required to collect food one by one and to avoid eating in large groups. In addition, the dining staff has requested that students feeling ill send emails to request food for delivery.<br>
+Given the recent news regarding Coronavirus, International House (I-House), a Berkeley residential housing community, has imposed strict rules limiting social gatherings to avoid potential spreading of the disease. To avoid contact, the dining hall and other public spaces have closed and instead students are required to collect food one by one and to avoid eating in large groups. In addition, the dining staff has requested that students feeling ill send emails to request food for delivery.
 <br>
 <h3>Proposal</h3>
 Our team would like to build a web app that would allow I-House students who are self-quarantining to request meals from the dining hall. Dining hall workers would be able to open a different part of the app and see all the orders for that day in one easy format. Runners (volunteer students) would then complete orders on behalf of the quarantined students and deliver meals outside students’ rooms. In addition to printing daily orders for easy completion, runners could also mark orders as delivered, helping them coordinate orders among themselves.
@@ -26,7 +26,7 @@ In terms of design, both Google Forms and Google Sheets are strong templates for
 <li>MongoDB</li>
 <li>Project API</li>
 </ul>
-<br>
+
 <h3>Project Process</h3>
 <ul>
 <li>Dining Hall Workers make a Google Form based on the day’s menu</li>
