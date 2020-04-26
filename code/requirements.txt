@@ -1,0 +1,6 @@
+gspread
+oauth2client
+bson
+pymongo
+flask
+flask_pymongo
