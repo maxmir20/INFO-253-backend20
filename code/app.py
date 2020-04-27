@@ -98,20 +98,22 @@ def delete_tasks(name):
     else:
         return Response(json.dumps({'error': 'Object not found'}), status=404)
 
+@app.route('/tasks/lunch', methods = ['GET'])
+def lunch_tasks():
+    output = []
 
+    for key in db.meals.find({ '$or' : [{'Today, I would like:' : 'Lunch only'}, {'Today, I would like:' : 'Lunch and Dinner'}]}):
+        output.append(key)
 
+    return Response(dumps(output), status=200, mimetype='application/json')
 
+@app.route('/tasks/dinner', methods = ['GET'])
+def dinner_tasks():
+    output = []
 
+    for key in db.meals.find({ '$or' : [{'Today, I would like:' : 'Dinner only'}, {'Today, I would like:' : 'Lunch and Dinner'}]}):
+        output.append(key)
 
-
-
-    
-
-
-
-
-
-
-
+    return Response(dumps(output), status=200, mimetype='application/json')
 
 
