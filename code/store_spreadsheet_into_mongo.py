@@ -21,14 +21,23 @@ mydb = myclient["tasks"]
 mycol = mydb["meals"]
 
 
-for record in allData:
-    
+def meal_bool_transform(value):
+    if value:
+        meal_dict = {}
+        value = value[1:-1]
 
-    meal_count = 0
-    lunch_menu = {}
-    dinner_menu = {}
-    menu = [lunch_menu, dinner_menu]
-    
+        menu_items = value.split(', ')
+        for item in menu_items:
+            dict_components = item.split('=')
+            meal_dict[dict_components[0]] = (dict_components[1]=='true')
+        return meal_dict
+    else:
+        return value
+
+
+
+for record in allData:
+        
     # remove key and value with '.' and create a new key without '.' with the same value
     key_with_dot = {}
     for key, value in record.items():        
@@ -39,9 +48,13 @@ for record in allData:
     for key, value in key_with_dot.items():
         del record[key]
         new_key = key.replace(".", "")
-        record[new_key] = value           
+        if ("Lunch" in key) or ("Dinner" in key):
+            new_value = meal_bool_transform(value)
+        else:
+            new_value = value 
+        record[new_key] = new_value 
     
-    record["Is_completed"] = False
+    record["is_completed"] = False
     mycol.insert_one(record)
 
 
