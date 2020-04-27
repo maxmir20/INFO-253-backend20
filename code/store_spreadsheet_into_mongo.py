@@ -41,7 +41,7 @@ for record in allData:
         new_key = key.replace(".", "")
         record[new_key] = value           
     
-    record["Is_completed"] = False
+    record["is_completed"] = False
     mycol.insert_one(record)
 
 

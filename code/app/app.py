@@ -62,7 +62,7 @@ def update_open_tasks(name):
         return Response("", status = 204)
     else:
         if a['n'] == 1:
-            return Response("The tasks is already open", status=200)
+            return Response("The task is already open", status=200)
         else:
             return Response(json.dumps({'error': 'Object not found'}), status=404)
     return Response(dumps(name), status = 204)
@@ -80,7 +80,7 @@ def update_closed_tasks(name):
         return Response("", status = 204)
     else:
         if a['n'] == 1:
-            return Response("The tasks is already closed", status=200)
+            return Response("The task is already closed", status=200)
         else:
             return Response(json.dumps({'error': 'Object not found'}), status=404)
 
@@ -97,6 +97,24 @@ def delete_tasks(name):
         return Response("", status = 204)
     else:
         return Response(json.dumps({'error': 'Object not found'}), status=404)
+
+@app.route('/tasks/lunch', methods = ['GET'])
+def lunch_tasks():
+    output = []
+
+    for key in db.meals.find({ '$or' : [{'Today, I would like:' : 'Lunch only'}, {'Today, I would like:' : 'Lunch and Dinner'}]}):
+        output.append(key)
+
+    return Response(dumps(output), status=200, mimetype='application/json')
+
+@app.route('/tasks/dinner', methods = ['GET'])
+def dinner_tasks():
+    output = []
+
+    for key in db.meals.find({ '$or' : [{'Today, I would like:' : 'Dinner only'}, {'Today, I would like:' : 'Lunch and Dinner'}]}):
+        output.append(key)
+
+    return Response(dumps(output), status=200, mimetype='application/json')
 
 
 
