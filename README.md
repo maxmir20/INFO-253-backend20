@@ -1,4 +1,4 @@
-# INFO-253-backend20
+# Back-end Web Architecture Final Project
 
 <h3>Project title</h3>
 Meal Order Delivery App
