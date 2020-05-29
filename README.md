@@ -1,4 +1,5 @@
 # Back-end Web Architecture Final Project
+![](Diagram.png)
 
 <h3>Project title</h3>
 Meal Order Delivery App
@@ -6,6 +7,7 @@ Meal Order Delivery App
 <h3>Project Team</h3>
 Victor Hsin, Allison Kuo, Brinda Gurusamy, and Max Ingraham-Rakatansky
 <br>
+
 <h3>Background</h3>
 Given the recent news regarding Coronavirus, International House (I-House), a Berkeley residential housing community, has imposed strict rules limiting social gatherings to avoid potential spreading of the disease. To avoid contact, the dining hall and other public spaces have closed and instead students are required to collect food one by one and to avoid eating in large groups. In addition, the dining staff has requested that students feeling ill send emails to request food for delivery.
 <br>
